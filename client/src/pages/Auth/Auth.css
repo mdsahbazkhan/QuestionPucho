@@ -185,6 +185,15 @@ hr{
   justify-content: center;
   display: flex; 
 }
+@media screen and (max-width: 960px)  {
+  .auth-container-1{
+    display: none;
+    
+  }
+  .auth-container{
+    margin-top: 50px;
+  }
+}
 
 
 

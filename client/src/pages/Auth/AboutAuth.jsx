@@ -23,7 +23,7 @@ function AboutAuth() {
         <p>Answer questions and earn reputation</p>
       </div>
       <p>Collaborate and share knowledge with a private group for FREE. <br />
-        <span style={{ color: "#1B75D0" }}>Get Stack Overflow for Teams free for up to 50 users.</span>
+        <span style={{ color: "#1B75D0" }}>Get QuestionPucho for Teams free for up to 50 users.</span>
       </p>
     </div>
   );

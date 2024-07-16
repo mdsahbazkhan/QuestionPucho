@@ -47,7 +47,7 @@ function Navbar({ handleslidein }) {
           {/* <Link to="/" className="nav-items nav-btn res-nav">
             Products
           </Link> */}
-          <Link to="/" className="nav-items nav-btn res-nav">
+          <Link to="/"  className="nav-items nav-btn res-nav">
             For Teams
           </Link>
           <form>

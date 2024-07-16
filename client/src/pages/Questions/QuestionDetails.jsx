@@ -26,7 +26,7 @@ const QuestionsDetails = () => {
 
   const location = useLocation();
   const Navigate = useNavigate();
-  const url = "http://localhost:5000";
+  const url = "https://questionpucho.onrender.com";
 
   const handlePostAns = (e, answerLength) => {
     e.preventDefault();
@@ -90,7 +90,7 @@ const QuestionsDetails = () => {
             .map((question) => (
               <div key={question._id}>
                 <section className="question-details-container">
-                  <h1>{question.questionTitle}</h1>
+                  <h1 style={{fontSize:"27px"}}>{question.questionTitle}</h1>
                   <div className="question-details-container-2">
                     <div className="question-votes">
                       <img

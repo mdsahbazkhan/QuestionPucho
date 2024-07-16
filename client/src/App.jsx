@@ -15,25 +15,53 @@ function App() {
     dispatch(fetchAllUsers());
   }, [dispatch]);
 
-  const [slidein, setslidein] = useState(true);
+  // const [slidein, setslidein] = useState(true);
+
+  // useEffect(() => {
+  //   if (window.innerWidth <= 760) {
+  //     setslidein(false);
+  //   }
+  // }, []);
+
+  // const handleslidein = () => {
+  //   if (window.innerWidth <= 760) {
+  //     setslidein((state) => !state);
+  //   }
+  // };
+  const [slidein, setSlidein] = useState(true);
+
+  const handleResize = () => {
+    if (window.innerWidth <= 760) {
+      setSlidein(false);
+    } else {
+      setSlidein(true);
+    }
+  };
 
   useEffect(() => {
-    if (window.innerWidth <= 760) {
-      setslidein(false);
-    }
+    handleResize(); // Initial check on mount
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handleslidein = () => {
     if (window.innerWidth <= 760) {
-      setslidein((state) => !state);
+      setSlidein((state) => !state);
     }
   };
+
 
   return (
     <div className="App">
       <Router>
         <Navbar handleslidein={handleslidein}/>
-        <AllRoutes slidein={slidein} handleslidein={handleslidein} />
+        <AllRoutes slidein={slidein}  />
       </Router>
     </div>
   );
