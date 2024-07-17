@@ -36,7 +36,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #ffe4d9;
+  /* background-color: #ffe4d9; */
+  background: linear-gradient(135deg, #ebadb6 0%, #aceae1 100%);
   /* background: radial-gradient(#f588d8, #c0a3e5); */
   border-bottom: solid 1px #edeff0;
 }
